@@ -1,119 +1,109 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    padding: 150px;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    background-image: url("../img/bg_image.jpg");
-  }
-  
-  .wrapper {
-    background-color: #F4C2C2;
-    height: 400px;
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
-  }
-  
-  .wrapper:before, .wrapper:after {
-    content: "";
-    position: absolute;
-    height: 400px;
-    width: 350px;
-    z-index: 2;
-  }
-  
-  .wrapper:after {
-    right: 0;
-    top: 0;
-    transform: rotateZ(180deg);
-  }
-  
-  .wrapper:before {
-    left: 0;
-    top: 0;
-  }
-  
-  .wrapper .track {
-    display: flex;
-    width: calc(350px * 30);
-    animation: scroll 120s 0.5s linear infinite;
-  }
-  
-  .wrapper .logo {
-    width: 400px;
-  }
-  
-  .wrapper .logo img {
-    height: 400px;
-  }
-  
-  @keyframes  scroll {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(calc(-400px * 30));
-    }
-  }
-
-
-.button-53 {
-  background-color: #F4C2C2;
-  border: 0 solid #E5E7EB;
   box-sizing: border-box;
-  color: #000000;
-  display: flex;
-  font-family: ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  font-size: 1rem;
-  font-weight: 700;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+  background-color: #717171;
+  background-image: url("../img/bg_image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 32;
   justify-content: center;
-  line-height: 1.75rem;
-  padding: .75rem 1.65rem;
-  position: relative;
-  text-align: center;
-  text-decoration: none #000000 solid;
-  text-decoration-thickness: auto;
+  align-items: center;
+}
+
+.navbar {
+  justify-content: center;
   width: 100%;
-  max-width: 460px;
+  height: fit-content;
+  display: flex;
+  background-color: #f4c2c2b4;
+  border-radius: 15px;
+}
+
+.audio {
+  display: hidden;
+}
+
+.navbar img {
+  height: 100px;
+  width: 100px;
+}
+
+.navbar h1 {
+  font-family: Apple Chancery, cursive;
+}
+
+.slideText {
+  height: auto;
+  width: 600px;
+  margin-left: 1cm;
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.mySlides {
+  display: none;
+  left: 30px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  justify-content: center;
+  display: flex;
+  top: 1cm;
+  max-width: auto;
   position: relative;
-  cursor: pointer;
-  transform: rotate(-2deg);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+  margin: auto;
 }
 
-.button-53:focus {
-  outline: 0;
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: relative;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
 }
 
-.button-53:after {
-  content: '';
-  position: absolute;
-  border: 1px solid #000000;
-  bottom: 4px;
-  left: 4px;
-  width: calc(100% - 1px);
-  height: calc(100% - 1px);
+.fade-in {
+  animation-name: fade-in;
+  animation-duration: 2s;
 }
 
-.button-53:hover:after {
-  bottom: 2px;
-  left: 2px;
+.fade-out {
+  animation-name: fade-out;
+  animation-duration: 2s;
 }
 
-@media (min-width: 768px) {
-  .button-53 {
-    padding: .75rem 3rem;
-    font-size: 1.25rem;
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: .0;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {
+    font-size: 11px
   }
 }

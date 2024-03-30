@@ -1,36 +1,44 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - www.codingnepalweb.com -->
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Happy Anniversary</title>
-    <link rel="shortcut icon" href="static\img\favicon.ico" type="image/x-icon">
-    <link rel="icon" href="static\img\favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="static\css\slider.css" />
-  </head>
-  <body>
-      <div class="wrapper">
-        <div class="track">
-          {% for i in range(1,31) %}
-            <div class="logo">
-                <img class="image-item" src="static\img\img ({{ i }}).jpg" alt="img ({{ i }})" />
-            </div>
-            <div> <pre> <p>  </p></pre></div>
-          {% endfor %}
-          {% for i in range(1,31) %}
-            <div class="logo">
-                <img class="image-item" src="static\img\img ({{ i }}).jpg" alt="img ({{ i }})" />
-            </div>
-            <div> <pre> <p>  </p></pre></div>
-          {% endfor %}
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="static/css/slider.css">
+<link rel="shortcut icon" href="static\img\favicon.ico" type="image/x-icon">
+<link rel="icon" href="static\img\favicon.ico" type="image/x-icon">
+<title>Happy Anniversary</title>
+</head>
+<body>
+
+  <audio id="background-audio" class="background-audio" loop="loop">
+    <source src="static/audio/memories.mp3" type="audio/mpeg">
+  </audio>
+  
+  <div class="navbar">
+    <img src="static/gif/navbar.gif" alt="gif">
+      <a href="/">
+        <h1>Happy Anniversary</h1>
+      </a>
+    <img src="static/gif/navbar.gif" alt="gif">
+  </div>
+
+  <div class="slideshow-container">
+    <div class="slideText">
+      <marquee behavior="scroll" direction="up" scrollamount="4">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ab dolore, hic ea dolor eligendi quam, animi rem mollitia quisquam praesentium ad ex vero, officia aliquam. Eum, delectus. Doloribus ipsa libero modi magni quos enim eligendi consequuntur obcaecati vitae facilis accusamus, dolor autem repudiandae porro voluptatibus dolorem quis adipisci expedita natus impedit veritatis in dolorum? Commodi tempore doloribus sapiente aliquam, quis neque tempora impedit, eaque expedita nobis obcaecati ex, vitae magnam? Nihil voluptates in est, ea temporibus nam, cupiditate dolorum maiores rerum tempora ad aliquam expedita vitae illum sequi unde quas sint commodi minus? Adipisci, suscipit facere ipsa illum in possimus voluptatum facilis obcaecati corrupti amet et. Impedit eveniet nisi commodi modi similique facere officia dolorum dolore pariatur sit soluta eius vel voluptatibus culpa labore, blanditiis recusandae totam aut inventore perferendis velit quos sed laudantium consequuntur? Sint officia incidunt corporis. Accusantium consequatur ipsam iste reiciendis et sint. Fuga quos excepturi incidunt numquam odio, ad saepe ratione eum, ipsa consequatur natus labore ipsum expedita eveniet distinctio molestias veniam culpa fugit atque eius dolorum similique voluptate soluta delectus? Distinctio quidem consectetur vitae, soluta esse beatae praesentium recusandae rem repudiandae ex nostrum reiciendis delectus vel consequuntur sed deserunt ullam aperiam quae fuga numquam!
+      </marquee>
+    </div>
+      {% for i in range(0,30,2) %}
+        <div class="mySlides fade-in">
+          <img src="static/img/img ({{ i+1 }}).jpg" height="500">
+          <div class="text">{{ i+1 }} / 30</div>
         </div>
-      </div>
-      <br><br>
-      <center>
-        <div>
-          <a href="/" class="button-53">Card</a>
+        <div class="mySlides fade-out">
+          <img src="static/img/img ({{ i+1 }}).jpg" height="500">
+          <div class="text">{{ i+1 }} / 30</div>
         </div>
-      </center>
-  </body>
-</html>
+      {% endfor %}
+  </div>
+  
+  <script src="static\js\slider.js"></script>
+</body>
+</html> 
