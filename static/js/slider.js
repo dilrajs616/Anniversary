@@ -26,16 +26,22 @@ window.onload = function() {
   document.getElementById("background-audio").play();
 }
 
-const dialog = document.querySelector("dialog");
-const showButton = document.querySelector("dialog + button");
-const closeButton = document.querySelector("dialog button");
+const dialogs = document.querySelectorAll("dialog");
+const showButtons = document.querySelectorAll("dialog + button");
+const closeButtons = document.querySelectorAll("dialog button");
 
-// "Show the dialog" button opens the dialog modally
-showButton.addEventListener("click", () => {
-  dialog.showModal();
-});
+// Loop through all dialog elements
+dialogs.forEach((dialog, index) => {
+  const showButton = showButtons[index]; // Get corresponding show button
+  const closeButton = closeButtons[index]; // Get corresponding close button
 
-// "Close" button closes the dialog
-closeButton.addEventListener("click", () => {
-  dialog.close();
+  // "Show the dialog" button opens the dialog modally
+  showButton.addEventListener("click", () => {
+    dialog.showModal();
+  });
+
+  // "Close" button closes the dialog
+  closeButton.addEventListener("click", () => {
+    dialog.close();
+  });
 });

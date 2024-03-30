@@ -10,5 +10,9 @@ def index():
 def memories():
     return render_template("slider.html")
 
+@app.route("/videos")
+def videos():
+    return "under construction"
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True)
