@@ -213,6 +213,9 @@ body {
   .articles {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
+  body {
+    zoom: 0.5;
+  }
 }
 
 
