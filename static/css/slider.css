@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+@viewport {
+  width: device-width; /* Set width to the device's width */
+  zoom: 1.0; /* Reset zoom level */
+}
+
 body {
   font-family: Apple Chancery, cursive;
   background-color: #CBC3E3;
@@ -207,6 +212,9 @@ body {
   }
   .articles {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  @viewport {
+    width: 600px;
   }
 }
 
