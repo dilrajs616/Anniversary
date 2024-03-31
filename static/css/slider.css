@@ -216,6 +216,9 @@ body {
   @viewport {
     width: 600px;
   }
+  body {
+    zoom: 0.5;
+  }
 }
 
 
