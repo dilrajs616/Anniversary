@@ -192,9 +192,21 @@ body {
 }
 
 /* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 600px) {
   .text {
     font-size: 11px
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: center; 
+    padding: 10px; 
+  }
+  .slideshow-container {
+    flex-direction: column; 
+    align-items: center; 
+  }
+  .articles {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   }
 }
 
