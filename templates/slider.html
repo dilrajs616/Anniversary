@@ -1,25 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="static/css/slider.css">
-<link rel="shortcut icon" href="static\img\favicon.ico" type="image/x-icon">
-<link rel="icon" href="static\img\favicon.ico" type="image/x-icon">
-<title>Happy Anniversary</title>
-</head>
-<body>
-  <!--  
+{% extends "layout.html" %}
+
+{% block head %}
+  <link rel="stylesheet" href="static/css/slider.css">
+{% endblock head %}
+
+{% block body %}
+  
+
   <audio id="background-audio" class="background-audio" loop="loop">
     <source src="static/audio/memories.mp3" type="audio/mpeg">
   </audio> 
-   -->
-  <div class="navbar shadow">
-    <img src="static/gif/navbar.gif" alt="gif">
-      <a href="/">
-        <h1>Happy Anniversary</h1>
-      </a>
-    <img src="static/gif/navbar.gif" alt="gif">
-  </div>
 
   <div class="slideshow-container shadow">
     <div class="message">
@@ -107,5 +97,4 @@
     </div>
   </div>
   <script src="static\js\slider.js"></script>
-</body>
-</html> 
+{% endblock body %}

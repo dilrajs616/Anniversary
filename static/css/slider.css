@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fondamento:ital@0;1&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -8,7 +10,7 @@
 }
 
 body {
-  font-family: Apple Chancery, cursive;
+  font-family: "Fondamento", cursive;
   background-color: #CBC3E3;
   background-repeat: no-repeat;
   background-size: cover;
@@ -17,45 +19,17 @@ body {
   align-items: center;
 }
 
-.shadow {
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-}
-
 .btn {
   background: transparent;
   border: none;
 }
 
-.navbar {
-  justify-content: center;
-  width: 100%;
-  height: fit-content;
-  display: flex;
-  background: rgb(77,170,173);
-  background: linear-gradient(90deg, rgba(112,149,217,1) 0%, rgba(189,140,185,1) 51%, rgba(77,170,173,1) 100%);
-  opacity: 0.75;
-  border-radius: 15px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
-  box-sizing: border-box;
-}
 
 .audio {
   display: hidden;
 }
 
-.navbar img {
-  height: 120px;
-  width: 12 0px;
-}
 
-.navbar h1 {
-  font-size: 48px;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #5c0e55;
-}
 
 /* Slideshow container */
 .slideshow-container {
@@ -245,7 +219,6 @@ article a::after {
 /* basic article elements styling */
 article h2 {
   margin: 0 0 18px 0;
-  font-family: "Bebas Neue", cursive;
   font-size: 1.9rem;
   letter-spacing: 0.06em;
   color: var(--title-color);
@@ -303,9 +276,6 @@ Generic layout (demo looks)
 @media screen and (max-width: 960px) {
   article {
     container: card/inline-size;
-  }
-  .article-body p {
-    display: none;
   }
 }
 
