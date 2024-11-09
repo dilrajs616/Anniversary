@@ -1,18 +1,31 @@
-{% extends "layout.html" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="shortcut icon" href="img\favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="img\favicon.ico" type="image/x-icon" />
+    <title>Happy Anniversary</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+    <meta name="theme-color" content="#F26B38">
+    <link rel="stylesheet" href="css/index.css">
+  </head>
 
-{% block head %}
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.5.0/balloon.min.css">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="HandheldFriendly" content="true">
-  <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
-  <meta name="theme-color" content="#F26B38">
-  <link rel="stylesheet" href="static/css/index.css">
-{% endblock head %}
-
-{% block body %}
-
+  <body>
+    
+    <div class="navbar shadow">
+      <img src="gif/navbar.gif" alt="gif">
+        <a href="/">
+          <h1>Happy Anniversary</h1>
+        </a>
+      <img src="gif/navbar.gif" alt="gif">
+    </div>
   <br>
   <div id="card">
     <div id="card-inside">
@@ -95,15 +108,16 @@
       <div class="card-front_inside">
         <br> <br> <br>
         <div class="polaroid">
-          <div class="img"><img src="static\img\cover_pic.jpg" alt="cover image"></div>
+          <div class="img"><img src="img\cover_pic.jpg" alt="cover image"></div>
           <h2 class="subtitle">The Vibing Couple</h2>
         </div>
         <div class="shadow"></div>
       </div>
       <br>
       <center>
-        <a href="/memories" class="button-53">Memories</a>
+        <a href="/slider.html" class="button-53">Memories</a>
       </center> 
     </div>
-    <script src="static\js\index.js"></script>
-{% endblock body %}
+    <script src="js\index.js"></script>
+  </body>
+</html>
